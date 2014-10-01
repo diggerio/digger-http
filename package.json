@@ -1,0 +1,34 @@
+{
+  "name": "digger-http",
+  "version": "0.0.1",
+  "description": "HTTP transport for digger requests",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diggerio/digger-http.git"
+  },
+  "keywords": [
+    "digger",
+    "http"
+  ],
+  "author": "Kai Davenport",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diggerio/digger-http/issues"
+  },
+  "homepage": "https://github.com/diggerio/digger-http",
+  "devDependencies": {
+    "digger-client": "^2.6.1",
+    "digger-server": "^0.2.0",
+    "mocha": "~1.14.0",
+    "should": "~2.1.0",
+    "through2": "^0.6.2"
+  },
+  "dependencies": {
+    "hyperquest": "^0.3.0",
+    "ndjson": "^1.2.3"
+  }
+}
