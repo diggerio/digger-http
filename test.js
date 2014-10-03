@@ -24,18 +24,20 @@ describe('diggerhttp', function(){
     client.on('request', clienthandler)
     httpserver = http.createServer(serverhandler)
 
-    server.use(function(req, res){
-      return through.obj(function(chunk, env, cb){
+    server.warehouse({
+      append:function(req, res){
+        return through.obj(function(chunk, env, cb){
 
-        chunk._digger.tag.should.equal('folder')
-        chunk._digger.path.should.equal('/apples')
-        chunk._digger.class.length.should.equal(1)
-        chunk._digger.class[0].should.equal('red')
-        this.push({
-          name:'test'
+          chunk._digger.tag.should.equal('folder')
+          chunk._digger.path.should.equal('/apples')
+          chunk._digger.class.length.should.equal(1)
+          chunk._digger.class[0].should.equal('red')
+          this.push({
+            name:'test'
+          })
+          cb()
         })
-        cb()
-      })
+      }
     })
 
     httpserver.listen(8080, done)

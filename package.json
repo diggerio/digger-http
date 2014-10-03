@@ -21,8 +21,8 @@
   },
   "homepage": "https://github.com/diggerio/digger-http",
   "devDependencies": {
-    "digger-client": "^2.6.1",
-    "digger-server": "^0.2.0",
+    "digger-client": "^3.0.0",
+    "digger-server": "^2.0.0",
     "mocha": "~1.14.0",
     "should": "~2.1.0",
     "through2": "^0.6.2"
